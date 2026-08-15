@@ -1,0 +1,2474 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOcb6HTENMOeyxDlXzBtvgS",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kayof213/Disciplina-de-Intelig-ncia-Artificial./blob/main/Exercicio_Python_%5BKayo%20Felipe%5D%5B6b%20noturno%5D\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Exercicio simples apenas para mostrar que o \" print() \" funciona e o código esta rodando certinho."
+      ],
+      "metadata": {
+        "id": "CS0rAw3YAFSy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "RcR8BPtD2WuM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "49bab438-640c-40e4-e201-e23a5d219721"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, World!\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Hello, World!\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "O programa precisa pedir 2 números para o usuário e depois calcular a soma deles, para receber os valores usei o input(); e o int() para transformar os valores em números interiros."
+      ],
+      "metadata": {
+        "id": "K-dn0AJuEL1S"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero1 = float(input(\"Digite o primeiro número: \"))\n",
+        "numero2 = float(input(\"Digite o segundo número: \"))\n",
+        "\n",
+        "soma = numero1 + numero2\n",
+        "\n",
+        "print(\"A soma é:\", soma)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OobniVE1d7yo",
+        "outputId": "4e8c5f5e-7aff-405d-c055-e7387e745071"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 22\n",
+            "Digite o segundo número: 333\n",
+            "A soma é: 355.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Uso a fórmula área = pi * r². O módulo `math` já traz o valor de pi com bastante precisão, então não preciso digitar 3.14 na mão."
+      ],
+      "metadata": {
+        "id": "xsjecbA5UVXO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "raio = float(input(\"Digite o raio: \"))\n",
+        "\n",
+        "area = 3.14 * raio ** 2\n",
+        "\n",
+        "print(\"A área do círculo é:\", area)"
+      ],
+      "metadata": {
+        "id": "ygMu1tBmeUD1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cc29865c-ab85-4719-a650-8989f783b84e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o raio: 26\n",
+            "A área do círculo é: 2122.64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Fórmula direta: F = C * 9/5 + 32. Só peço a temperatura em Celsius e aplico a conta."
+      ],
+      "metadata": {
+        "id": "P7BQUoZvd0y6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "celsius = float(input(\"Digite a temperatura em Celsius: \"))\n",
+        "\n",
+        "fahrenheit = celsius * 9 / 5 + 32\n",
+        "\n",
+        "print(\"A temperatura em Fahrenheit é:\", fahrenheit)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SY1xosurdmnn",
+        "outputId": "56341e41-7249-4164-9dc9-84a54ef71c5f"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a temperatura em Celsius: 26\n",
+            "A temperatura em Fahrenheit é: 78.8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Peço um número e uso um `for` de 1 até 10 (o `range(1, 11)` porque o `range` não inclui o último valor) para imprimir cada linha da tabuada."
+      ],
+      "metadata": {
+        "id": "6s2_C1LSeNrL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "for i in range(1, 11):\n",
+        "    print(numero, \"x\", i, \"=\", numero * i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "27rrMzZaeHIj",
+        "outputId": "9d7ab268-b253-4b36-89ce-27de7c8c7d25"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 5\n",
+            "5 x 1 = 5\n",
+            "5 x 2 = 10\n",
+            "5 x 3 = 15\n",
+            "5 x 4 = 20\n",
+            "5 x 5 = 25\n",
+            "5 x 6 = 30\n",
+            "5 x 7 = 35\n",
+            "5 x 8 = 40\n",
+            "5 x 9 = 45\n",
+            "5 x 10 = 50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Para gerar só os pares de 1 a 20, dá pra usar o terceiro parâmetro do `range`, o \\\"passo\\\". Começando em 2 e pulando de 2 em 2 eu já pego só os números pares."
+      ],
+      "metadata": {
+        "id": "NrHVRw-zezyT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for numero in range(1, 21):\n",
+        "    if numero % 2 == 0:\n",
+        "        print(numero)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HO5X3eXGesiz",
+        "outputId": "f7584837-7cbb-476e-cccb-4de7d5261a6b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n",
+            "20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Uso o operador `%` (resto da divisão). Se o resto da divisão por 2 for 0, o número é par, senão é ímpar."
+      ],
+      "metadata": {
+        "id": "H36HzVuffLOT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "if numero % 2 == 0:\n",
+        "    print(\"O número é par\")\n",
+        "else:\n",
+        "    print(\"O número é ímpar\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a2l8C3XJfBfN",
+        "outputId": "32548dc4-0dd9-47e4-d68c-fc87dca4900f"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 28\n",
+            "O número é par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Palíndromo é uma palavra que se lê igual de trás para frente, tipo \"radar\". Para checar isso eu comparo a palavra original com ela mesma invertida (usando a fatia `[::-1]`). Também converto tudo pra minúsculo antes, pra \"Radar\" também ser reconhecido."
+      ],
+      "metadata": {
+        "id": "Kou30nCwgAiy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palavra = input(\"Digite uma palavra: \")\n",
+        "\n",
+        "if palavra == palavra[::-1]:\n",
+        "    print(\"É um palíndromo\")\n",
+        "else:\n",
+        "    print(\"Não é um palíndromo\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "68uD5WJxfxMz",
+        "outputId": "a7d543a7-1316-44a0-cfec-0a2c8acfbd75"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma palavra: arara\n",
+            "É um palíndromo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "O fatorial de n é o produto de todos os inteiros de 1 até n. Fiz com um laço `for` simples, multiplicando um acumulador a cada volta."
+      ],
+      "metadata": {
+        "id": "gBONnkxggj17"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "fatorial = 1\n",
+        "\n",
+        "for i in range(1, numero + 1):\n",
+        "    fatorial = fatorial * i\n",
+        "\n",
+        "print(\"O fatorial é:\", fatorial)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B0AtlPFdgTvr",
+        "outputId": "6adea8e1-8918-4599-8402-1b826a1b0f39"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 8\n",
+            "O fatorial é: 40320\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Na sequência de Fibonacci cada número é a soma dos dois anteriores (começando em 0 e 1). Guardo os dois últimos valores em variáveis e vou atualizando eles a cada passo do laço."
+      ],
+      "metadata": {
+        "id": "CLLrsuzAgxyq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 0\n",
+        "b = 1\n",
+        "\n",
+        "for i in range(10):\n",
+        "    print(a)\n",
+        "\n",
+        "    proximo = a + b\n",
+        "    a = b\n",
+        "    b = proximo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mzNvBMC4goej",
+        "outputId": "48f2a2e3-b295-4b3a-bf20-0065cc785e6e"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "8\n",
+            "13\n",
+            "21\n",
+            "34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Crio uma lista fixa de números e uso as funções prontas `max()` e `min()` do Python, que já fazem exatamente o que o exercício pede."
+      ],
+      "metadata": {
+        "id": "d48ABayMhCT6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [10, 5, 20, 8, 15]\n",
+        "\n",
+        "maior = max(numeros)\n",
+        "menor = min(numeros)\n",
+        "\n",
+        "print(\"Maior número:\", maior)\n",
+        "print(\"Menor número:\", menor)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1ksUY4CSg7ML",
+        "outputId": "fce491a7-7836-4b4d-ce39-0e0c36dec3a6"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Maior número: 20\n",
+            "Menor número: 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Para contar quantas vezes cada caractere aparece, percorro a string letra por letra e vou guardando a contagem num dicionário. Se a letra já está no dicionário, somo 1; se não está, crio a entrada com valor 1."
+      ],
+      "metadata": {
+        "id": "JtI0D4F-iC6T"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = input(\"Digite um texto: \")\n",
+        "\n",
+        "contagem = {}\n",
+        "\n",
+        "for caractere in texto:\n",
+        "    if caractere in contagem:\n",
+        "        contagem[caractere] = contagem[caractere] + 1\n",
+        "    else:\n",
+        "        contagem[caractere] = 1\n",
+        "\n",
+        "print(contagem)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "anao0yuOhKtr",
+        "outputId": "d2fb9e83-c29f-4880-8c54-0fe8c3408bba"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um texto: ola boa tarde tudo bem ?\n",
+            "{'o': 3, 'l': 1, 'a': 3, ' ': 5, 'b': 2, 't': 2, 'r': 1, 'd': 2, 'e': 2, 'u': 1, 'm': 1, '?': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "O Python já tem o método `.sort()` para ordenar listas em ordem crescente diretamente, sem precisar criar uma nova lista."
+      ],
+      "metadata": {
+        "id": "iT_F2qJsiK37"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [5, 2, 8, 1, 9, 3]\n",
+        "\n",
+        "numeros.sort()\n",
+        "\n",
+        "print(\"Lista ordenada:\", numeros)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bkflJ9tKiIWc",
+        "outputId": "04691199-4c06-4f2b-b6ee-c8fcc50fab66"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lista ordenada: [1, 2, 3, 5, 8, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Uso a função `sum()`, que já soma todos os itens de uma lista numérica."
+      ],
+      "metadata": {
+        "id": "5Qbwu5L9iT0y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "soma = sum(numeros)\n",
+        "\n",
+        "print(\"A soma é:\", soma)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cQHFdZGciPfk",
+        "outputId": "d1b61138-8cba-401c-8d7f-68435afde169"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A soma é: 150\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A média é a soma dos valores dividida pela quantidade de valores. Uso `sum()` para a soma e `len()` para saber quantos elementos tem a lista."
+      ],
+      "metadata": {
+        "id": "xz_XsugGia4C"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "soma = sum(numeros)\n",
+        "media = soma / len(numeros)\n",
+        "\n",
+        "print(\"A média é:\", media)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Nt-Cq5GSiW0L",
+        "outputId": "6f127ccd-debb-40b7-9be9-358744b0ac42"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A média é: 30.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Para inverter uma string, uso a mesma técnica de fatiamento do exercício do palíndromo: `[::-1]` percorre a string de trás para frente."
+      ],
+      "metadata": {
+        "id": "V1Oa3J99imoT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = input(\"Digite um texto: \")\n",
+        "\n",
+        "invertido = texto[::-1]\n",
+        "\n",
+        "print(\"Texto invertido:\", invertido)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9ajjXG8CihKz",
+        "outputId": "945a2fd5-5b43-436c-cfc7-f4430db5b1ce"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um texto: oal boa tarde\n",
+            "Texto invertido: edrat aob lao\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Primeiro divido a frase em palavras com `.split()` (que separa pelos espaços). Depois, igual eu fiz com os caracteres no exercício 12, vou contando a frequência de cada palavra em um dicionário."
+      ],
+      "metadata": {
+        "id": "FYQX-bKzjJoz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = input(\"Digite um texto: \")\n",
+        "\n",
+        "palavras = texto.split()\n",
+        "contagem = {}\n",
+        "\n",
+        "for palavra in palavras:\n",
+        "    if palavra in contagem:\n",
+        "        contagem[palavra] = contagem[palavra] + 1\n",
+        "    else:\n",
+        "        contagem[palavra] = 1\n",
+        "\n",
+        "print(contagem)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XslagFPoisGz",
+        "outputId": "13135a68-b6cc-43c7-eb35-229e32d0541c"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um texto: boa tarde , comparecerei ao evento hoje a tarde\n",
+            "{'boa': 1, 'tarde': 2, ',': 1, 'comparecerei': 1, 'ao': 1, 'evento': 1, 'hoje': 1, 'a': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Um número é primo quando só é divisível por 1 e por ele mesmo. Testo os divisores de 2 até a raiz quadrada do número (não precisa ir além disso, pois se não achou divisor até a raiz, não vai achar depois). Números menores que 2 não são primos."
+      ],
+      "metadata": {
+        "id": "Z_V2KnkgjV2C"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "primo = True\n",
+        "\n",
+        "if numero < 2:\n",
+        "    primo = False\n",
+        "\n",
+        "for i in range(2, numero):\n",
+        "    if numero % i == 0:\n",
+        "        primo = False\n",
+        "\n",
+        "if primo:\n",
+        "    print(\"O número é primo\")\n",
+        "else:\n",
+        "    print(\"O número não é primo\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WaSQGDiyjPJb",
+        "outputId": "97524e58-1251-48c0-99eb-c7ff107afbe9"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 11\n",
+            "O número é primo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Uso `random.randint()` para gerar um número secreto entre 1 e 100. O jogador vai tentando até acertar, e a cada tentativa eu dou uma dica dizendo se o palpite foi maior ou menor que o número sorteado."
+      ],
+      "metadata": {
+        "id": "joZasP3qkCJJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "numero = random.randint(1, 100)\n",
+        "\n",
+        "tentativa = int(input(\"Tente adivinhar o número de 1 a 100: \"))\n",
+        "\n",
+        "if tentativa == numero:\n",
+        "    print(\"Você acertou!\")\n",
+        "else:\n",
+        "    print(\"Você errou!\")\n",
+        "    print(\"O número era:\", numero)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P0l6LbnUjhQz",
+        "outputId": "32cba0e7-85a1-400a-9f1b-d024352f3b12"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tente adivinhar o número de 1 a 100: 100\n",
+            "Você errou!\n",
+            "O número era: 37\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A transposta troca linhas por colunas. A forma mais prática em Python é usar `zip(*matriz)`, que agrupa o primeiro elemento de cada linha, depois o segundo, e assim por diante."
+      ],
+      "metadata": {
+        "id": "AxFrf_PZkPmq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "matriz = [\n",
+        "    [1, 2, 3],\n",
+        "    [4, 5, 6]\n",
+        "]\n",
+        "\n",
+        "transposta = []\n",
+        "\n",
+        "for coluna in range(3):\n",
+        "    nova_linha = []\n",
+        "\n",
+        "    for linha in range(2):\n",
+        "        nova_linha.append(matriz[linha][coluna])\n",
+        "\n",
+        "    transposta.append(nova_linha)\n",
+        "\n",
+        "print(\"Matriz transposta:\")\n",
+        "\n",
+        "for linha in transposta:\n",
+        "    print(linha)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DBWhTg8AkMGL",
+        "outputId": "261d2e90-088d-4324-8221-e1fef67823eb"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Matriz transposta:\n",
+            "[1, 4]\n",
+            "[2, 5]\n",
+            "[3, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\"A busca binária só funciona em listas já ordenadas. A ideia é sempre olhar o elemento do meio: se ele for o que eu procuro, terminei; se o valor procurado for maior, eu descarto a metade da esquerda; se for menor, descarto a metade da direita. Isso é bem mais rápido do que procurar item por item."
+      ],
+      "metadata": {
+        "id": "gxzQemUckbaC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [1, 3, 5, 7, 9, 11, 13]\n",
+        "\n",
+        "numero = int(input(\"Digite o número que deseja procurar: \"))\n",
+        "\n",
+        "inicio = 0\n",
+        "fim = len(numeros) - 1\n",
+        "encontrou = False\n",
+        "\n",
+        "while inicio <= fim:\n",
+        "    meio = (inicio + fim) // 2\n",
+        "\n",
+        "    if numeros[meio] == numero:\n",
+        "        encontrou = True\n",
+        "        break\n",
+        "    elif numeros[meio] < numero:\n",
+        "        inicio = meio + 1\n",
+        "    else:\n",
+        "        fim = meio - 1\n",
+        "\n",
+        "if encontrou:\n",
+        "    print(\"Número encontrado!\")\n",
+        "else:\n",
+        "    print(\"Número não encontrado!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nW_rDvA2kU8l",
+        "outputId": "2653dbdb-e25a-42ab-f676-aa686c9d5bde"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o número que deseja procurar: 27\n",
+            "Número não encontrado!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A cifra de César desloca cada letra do alfabeto um número fixo de posições. Uso a função `ord()` para pegar o código da letra, somo o deslocamento, e uso `chr()` pra voltar pra letra. O `% 26` garante que, ao passar de \\\"z\\\", a gente volta pro começo do alfabeto."
+      ],
+      "metadata": {
+        "id": "dnkH5nzUkuIj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mensagem = input(\"Digite uma mensagem: \")\n",
+        "chave = 3\n",
+        "\n",
+        "mensagem_cifrada = \"\"\n",
+        "\n",
+        "for letra in mensagem:\n",
+        "    if letra.isalpha():\n",
+        "        nova_letra = chr((ord(letra.lower()) - ord('a') + chave) % 26 + ord('a'))\n",
+        "        mensagem_cifrada = mensagem_cifrada + nova_letra\n",
+        "    else:\n",
+        "        mensagem_cifrada = mensagem_cifrada + letra\n",
+        "\n",
+        "print(\"Mensagem criptografada:\", mensagem_cifrada)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "C6az8iMTkj7u",
+        "outputId": "3bb9af29-abcb-4b3f-f7cb-8c79e913864d"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite uma mensagem: eu estou bem\n",
+            "Mensagem criptografada: hx hvwrx ehp\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Para descriptografar é só fazer o caminho inverso: em vez de somar o deslocamento, eu subtraio. Dá pra reaproveitar a mesma lógica do exercício anterior, só invertendo o sinal."
+      ],
+      "metadata": {
+        "id": "l89Q7lYalLjy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mensagem = input(\"Digite a mensagem criptografada: \")\n",
+        "chave = 3\n",
+        "\n",
+        "mensagem_original = \"\"\n",
+        "\n",
+        "for letra in mensagem:\n",
+        "    if letra.isalpha():\n",
+        "        nova_letra = chr((ord(letra.lower()) - ord('a') - chave) % 26 + ord('a'))\n",
+        "        mensagem_original = mensagem_original + nova_letra\n",
+        "    else:\n",
+        "        mensagem_original = mensagem_original + letra\n",
+        "\n",
+        "print(\"Mensagem descriptografada:\", mensagem_original)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k6aUrpT4k3qN",
+        "outputId": "fe0dc66d-d842-483e-f612-d0036e4d8d90"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a mensagem criptografada: hx hvwrx ehp\n",
+            "Mensagem descriptografada: eu estou bem\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "O CPF tem 11 dígitos, sendo os dois últimos dígitos verificadores calculados a partir dos anteriores usando uma conta de pesos e módulo 11. Calculo o primeiro dígito verificador usando os 9 primeiros números, e o segundo usando os 10 primeiros (já incluindo o primeiro dígito calculado). Se os dois baterem com os dígitos informados, o CPF é válido."
+      ],
+      "metadata": {
+        "id": "Up5M85yzlZFD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cpf = input(\"Digite o CPF: \")\n",
+        "\n",
+        "cpf = cpf.replace(\".\", \"\")\n",
+        "cpf = cpf.replace(\"-\", \"\")\n",
+        "\n",
+        "if len(cpf) != 11:\n",
+        "    print(\"CPF inválido\")\n",
+        "else:\n",
+        "    soma = 0\n",
+        "\n",
+        "    for i in range(9):\n",
+        "        soma = soma + int(cpf[i]) * (10 - i)\n",
+        "\n",
+        "    resto = soma % 11\n",
+        "\n",
+        "    if resto < 2:\n",
+        "        digito1 = 0\n",
+        "    else:\n",
+        "        digito1 = 11 - resto\n",
+        "\n",
+        "    soma = 0\n",
+        "\n",
+        "    for i in range(10):\n",
+        "        soma = soma + int(cpf[i]) * (11 - i)\n",
+        "\n",
+        "    resto = soma % 11\n",
+        "\n",
+        "    if resto < 2:\n",
+        "        digito2 = 0\n",
+        "    else:\n",
+        "        digito2 = 11 - resto\n",
+        "\n",
+        "    if int(cpf[9]) == digito1 and int(cpf[10]) == digito2:\n",
+        "        print(\"CPF válido\")\n",
+        "    else:\n",
+        "        print(\"CPF inválido\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4Xl9II2AlPqb",
+        "outputId": "5e9778fe-de5f-40db-c4ea-67dbab67690c"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o CPF: 42441565903\n",
+            "CPF inválido\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Percorro a lista e uso `if/elif/else` para separar cada número em três listas: positivos, negativos e zeros."
+      ],
+      "metadata": {
+        "id": "uKfg0pYGlg2K"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [10, -5, 0, 8, -2, 0, 15]\n",
+        "\n",
+        "positivos = []\n",
+        "negativos = []\n",
+        "zeros = []\n",
+        "\n",
+        "for numero in numeros:\n",
+        "    if numero > 0:\n",
+        "        positivos.append(numero)\n",
+        "    elif numero < 0:\n",
+        "        negativos.append(numero)\n",
+        "    else:\n",
+        "        zeros.append(numero)\n",
+        "\n",
+        "print(\"Positivos:\", positivos)\n",
+        "print(\"Negativos:\", negativos)\n",
+        "print(\"Zeros:\", zeros)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WNH9EwjvleJL",
+        "outputId": "e13fe38f-b4c5-4dd2-87a6-0b34bbef6a42"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Positivos: [10, 8, 15]\n",
+            "Negativos: [-5, -2]\n",
+            "Zeros: [0, 0]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Peço os dois números e a operação desejada, e uso uma cadeia de `if/elif` para decidir qual conta fazer. No caso da divisão, preciso tratar o caso de divisão por zero, que não existe matematicamente."
+      ],
+      "metadata": {
+        "id": "Izyh9Kj_lrc6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero1 = float(input(\"Digite o primeiro número: \"))\n",
+        "numero2 = float(input(\"Digite o segundo número: \"))\n",
+        "\n",
+        "operacao = input(\"Digite a operação (+, -, *, /): \")\n",
+        "\n",
+        "if operacao == \"+\":\n",
+        "    resultado = numero1 + numero2\n",
+        "elif operacao == \"-\":\n",
+        "    resultado = numero1 - numero2\n",
+        "elif operacao == \"*\":\n",
+        "    resultado = numero1 * numero2\n",
+        "elif operacao == \"/\":\n",
+        "    resultado = numero1 / numero2\n",
+        "else:\n",
+        "    resultado = \"Operação inválida\"\n",
+        "\n",
+        "print(\"Resultado:\", resultado)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u6mx1YKGllpL",
+        "outputId": "c7eb859e-84b9-407b-c809-e28ef62f7b41"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 2\n",
+            "Digite o segundo número: 3\n",
+            "Digite a operação (+, -, *, /): +\n",
+            "Resultado: 5.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Duas palavras são anagramas se tiverem exatamente as mesmas letras, só que em ordem diferente. Uma forma simples de checar isso é ordenar as letras das duas palavras (com `sorted()`) e comparar: se as duas ordenadas ficarem iguais, são anagramas."
+      ],
+      "metadata": {
+        "id": "CbAA6cFUmDoX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palavra1 = input(\"Digite a primeira palavra: \")\n",
+        "palavra2 = input(\"Digite a segunda palavra: \")\n",
+        "\n",
+        "palavra1 = palavra1.lower()\n",
+        "palavra2 = palavra2.lower()\n",
+        "\n",
+        "if sorted(palavra1) == sorted(palavra2):\n",
+        "    print(\"As palavras são anagramas\")\n",
+        "else:\n",
+        "    print(\"As palavras não são anagramas\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zcWnW91flu68",
+        "outputId": "a7244522-c072-45c0-bf62-864c0d50fa05"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a primeira palavra: amor\n",
+            "Digite a segunda palavra: roma\n",
+            "As palavras são anagramas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Uso a biblioteca `matplotlib` para desenhar um gráfico de barras simples. Peço algumas categorias e valores fixos (poderiam vir do usuário também) e chamo `plt.bar()` para gerar o gráfico."
+      ],
+      "metadata": {
+        "id": "NNrwAf9-mOO6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "nomes = [\"João\", \"Maria\", \"Pedro\", \"Ana\"]\n",
+        "valores = [10, 20, 15, 25]\n",
+        "\n",
+        "plt.bar(nomes, valores)\n",
+        "\n",
+        "plt.title(\"Gráfico de Barras\")\n",
+        "plt.xlabel(\"Nomes\")\n",
+        "plt.ylabel(\"Valores\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 472
+        },
+        "id": "8b573wG-mIOj",
+        "outputId": "26663aa7-bab9-45ba-8f86-53cf8cbc0c91"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<Figure size 640x480 with 1 Axes>"
+            ],
+            "image/png": "iVBORw0KGgoAAAANSUhEUgAAAjIAAAHHCAYAAACle7JuAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlHJYcgAAAAlwSFlzAAAPYQAAD2EBqD+naQAAMwBJREFUeJzt3XlUVVX/x/HPFeSCjM5AoqLggLNm5txA4VRqOGSW4lBpmk85lJZpWolZllpmj2VQPZpmkpX2M4fK0sQx0tRMCdNyzBl8xOGe3x/9vL9uoIIC9257v9a6a3H33mef7+Es6uM+59xrsyzLEgAAgIGKubsAAACAq0WQAQAAxiLIAAAAYxFkAACAsQgyAADAWAQZAABgLIIMAAAwFkEGAAAYiyADQMuXL9cLL7yg06dPu7sUAMgXggzwD7dr1y7Fx8erfPnyKlGiRI7+JUuWqH79+vL19ZXNZtPx48eVkJCgypUrF32xufCkWgAUPYIMYJCMjAwNHjxY1apVU4kSJVSiRAnFxMRo0KBB2rx5c77ny87OVrdu3fToo4+qf//+OfqPHDmibt26yc/PT9OnT9f7778vf3//gjgUj/Xss8/KZrM5X8WKFVNYWJg6dOig1NRUd5cH4G+83V0AgLxZtGiRunfvLm9vb/Xs2VP16tVTsWLF9NNPPyklJUUzZsxQRkaGKlWqlOc5t27dqj59+ujRRx/NtX/9+vU6deqUnnvuOcXGxjrb33rrLTkcjms+Jk82Y8YMBQQEyOFwaO/evXrrrbfUqlUrrVu3TvXr13d3eQD+D0EGMEB6erruvfdeVapUSStWrFBYWJhL/4svvqg33nhDxYpdfpE1KyvLZUWlYcOGatiw4SXHHzp0SJIUEhLi0l68ePF8HoF5unTpojJlyjjfd+rUSbVr19b8+fMLJMicP39eDodDPj4+Ofr+fp4AXBqXlgADTJo0SVlZWUpKSsoRYiTJ29tbQ4YMUUREhLMtISFBAQEBSk9PV7t27RQYGKiePXtKkr799lt17dpVFStWlN1uV0REhB5//HH997//dW5/yy23qHfv3pKkxo0by2azKSEhwTn33+9LcTgcmjp1qurUqSNfX1+VLVtWbdq00YYNG5xjzp8/r+eee05Vq1aV3W5X5cqV9dRTTyk7OztPv4eFCxeqdu3a8vX1Ve3atfXxxx/nOs7hcGjKlCmqVauWfH19Vb58eT388MM6duxYnvaTm9DQUEl//q4vOnv2rMaMGaNGjRopODhY/v7+atmypb766iuXbXfv3i2bzaaXX35ZU6ZMcR7/tm3bnJeytm3bpvvuu08lS5ZUixYtJEmbN29WQkKCqlSpIl9fX4WGhqpv3746cuSIy/ynTp3SY489psqVK8tut6tcuXK64447tGnTpqs+XsAUrMgABli0aJGioqLUpEmTfG13/vx5xcXFqUWLFnr55ZedN/POnz9fWVlZGjhwoEqXLq21a9fqtdde02+//ab58+dLkp5++mlVr15dM2fO1Pjx4xUZGamqVatecl/9+vVTcnKy2rZtq/79++v8+fP69ttvlZqaqhtvvFGS1L9/f7377rvq0qWLhg0bprVr1yoxMVHbt2+/ZCi5aOnSpYqPj1dMTIwSExN15MgR9enTRxUqVMgx9uGHH1ZycrL69OmjIUOGKCMjQ6+//rq+//57rV69Ok8rSkePHpX0Zyj6/fff9dxzz8nX11fdunVzjjl58qTefvtt9ejRQw8++KBOnTqlWbNmKS4uLtdLUElJSTpz5oweeugh2e12lSpVytnXtWtXRUdHa8KECbIsS5K0bNky/fLLL+rTp49CQ0O1detWzZw5U1u3blVqaqpsNpskacCAAfroo480ePBgxcTE6MiRI1q1apW2b99+2RU34LpgAfBoJ06csCRZnTp1ytF37Ngx6/Dhw87X6dOnnX29e/e2JFkjR47MsV1mZmaOtueff96y2WzWr7/+6mxLSkqyJFnr1693Gdu7d2+rUqVKzvdffvmlJckaMmRIjnkdDodlWZaVlpZmSbL69+/v0j98+HBLkvXll19e4jfwp/r161thYWHW8ePHnW1Lly61JLnU8u2331qSrNmzZ7tsv2TJklzb/27s2LGWpByvkJAQa8mSJS5jz58/b2VnZ7u0HTt2zCpfvrzVt29fZ1tGRoYlyQoKCrIOHTqU6/569OiRo5a/ns+LPvjgA0uS9c033zjbgoODrUGDBl32uIDrFZeWAA938uRJSVJAQECOvltuuUVly5Z1vqZPn55jzMCBA3O0/fX+C4fDoTNnziguLk6WZen777/Pd40LFiyQzWbT2LFjc/RdXDX4/PPPJUlDhw516R82bJgkafHixZecf//+/UpLS1Pv3r0VHBzsbL/jjjsUExPjMnb+/PkKDg7WHXfcoT/++MP5atSokQICAnJc9rncMS1btkxLly5VUlKSqlWrpvj4eH333XfOMV5eXs57XBwOh44eParz58/rxhtvzPWyTnx8vMqWLZvr/gYMGJCjzc/Pz/nzmTNn9Mcff+jmm2+WJJf5Q0JCtHbtWu3bty9PxwZcT7i0BHi4wMBASVJmZmaOvn//+986deqUDh48qPvvvz9Hv7e3d66XXvbt26fnn39en332mfbv368LFy44+06cOJHvGtPT0xUeHu5yqeTvfv31VxUrVkxRUVEu7aGhoQoJCdGvv/562W0lKTo6Okdf9erVXf6nvnPnTp04cULlypXLda6LNzBfSatWrVxu9u3SpYuio6P16KOPauPGjc72d999V5MnT9ZPP/2kc+fOOdsjIyNzzJlb2+X6jh49qnHjxmnu3Lk56v7reZo0aZJ69+6tiIgINWrUSO3atVOvXr1UpUqVPB0rYDKCDODhgoODFRYWph9//DFH38V7Znbv3p3rtna7PceTTA6HQ3fccYeOHDmip59+WjExMfL399fevXvVrVu3Qn+s+uIKTWFxOBwqV66cZs+enWv/pVZEriQgIEBNmjTRJ5984nyq6D//+Y8SEhLUqVMnjRgxQuXKlZOXl5cSExOVnp6eY46/rrDkpa9bt2767rvvNGLECNWvX9/5OHibNm1czlO3bt3UsmVLffzxx1q6dKleeuklvfjii0pJSVHbtm2v6ngBUxBkAAO0b99eb7/9ttatW6ebbrrpmubasmWLtm3bpv/85z/Op5ik/7+EdTWqVq2qL774QkePHr3kqkylSpXkcDi0c+dO1axZ09l+8OBBHT9+/LKff3Oxb+fOnTn6duzYkaOW5cuXq3nz5pcNDlfj/Pnzkv5cHfP399dHH32kKlWqKCUlxSWg5XaJLb+OHTumFStWaNy4cRozZoyzPbffgSSFhYXpkUce0SOPPKJDhw6pYcOGeuGFFwgyuO5xjwxggCeeeEIlSpRQ3759dfDgwRz91v895ZIXF/+H+9fLIA6HQ6+++upV1xcfHy/LsjRu3LhL1tauXTtJ0pQpU1z6X3nlFUl/hrVLCQsLU/369fXuu++6XFJZtmyZtm3b5jK2W7duunDhgp577rkc85w/f17Hjx/P0zH93dGjR/Xdd98pNDTUednKy8tLkuvvf+3atVqzZs1V7eOvcptbyvn7u3DhQo7LgeXKlVN4eHieH2sHTMaKDGCA6OhozZkzRz169FD16tWdn+xrWZYyMjI0Z84cFStWLNf7Yf6uZs2aqlKlioYPH659+/YpMDBQCxYsuKYVmVtvvVUPPPCApk2bpp07dzovfXz77be69dZbNXjwYNWrV0+9e/fWzJkzdfz4cbVu3Vrr1q3Tu+++q06dOunWW2+97D4SExPVvn17tWjRQn379tXRo0f12muvqVatWi73D7Vu3VoPP/ywEhMTlZaWpjvvvFPFixfXzp07NX/+fE2dOlVdunS54jF99NFHCggIkGVZ2rdvn2bNmqVjx47pzTffdIbBDh06KCUlRZ07d1b79u2VkZGhN998UzExMbne05QfQUFBatWqlSZNmqRz587phhtu0NKlS5WRkeEy7tSpU6pQoYK6dOmievXqKSAgQMuXL9f69es1efLka6oBMIL7HpgCkF+7du2yBg4caEVFRVm+vr6Wn5+fVaNGDWvAgAFWWlqay9jevXtb/v7+uc7z448/WrfddpsVEBBglS1b1howYIC1ZcsWS5KVlJTkHJfXx68t689HkV966SWrRo0alo+Pj1W2bFmrbdu21saNG51jzp07Z40bN86KjIy0ihcvbkVERFijRo2yzpw5k6fjX7BggVWzZk3LbrdbMTExVkpKSq61WJZlzZw502rUqJHl5+dnBQYGWnXq1LGeeOIJa9++fZfdR26PX/v7+1tNmza1PvzwQ5exDofDmjBhglWpUiXLbrdbDRo0sBYtWpSjpouPX7/00kuX3N/hw4dz9P32229W586drZCQECs4ONjq2rWrtW/fPkuSNXbsWMuyLCs7O9saMWKEVa9ePSswMNDy9/e36tWrZ73xxhtX/oUC1wGbZeVjTRoAAMCDcI8MAAAwFkEGAAAYiyADAACMRZABAADGIsgAAABjEWQAAICxrvsPxHM4HM4P/Srs73gBAAAFw7IsnTp1SuHh4Tm+M+6vrvsgs2/fPkVERLi7DAAAcBX27t172U8tv+6DTGBgoKQ/fxFBQUFurgYAAOTFyZMnFRER4fz/+KVc90Hm4uWkoKAgggwAAIa50m0h3OwLAACMRZABAADGIsgAAABjEWQAAICxCDIAAMBYBBkAAGAsggwAADAWQQYAABiLIAMAAIxFkAEAAMZya5BJTExU48aNFRgY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FSpUkN1ud34IIYpGw4YNFRERoZSUFGdbSkqKKlasqAYNGjjblixZohYtWigkJESlS5dWhw4dlJ6e7uzfvXu3bDab5s2bp9atW8vX11ezZ8/OcVkiPT1dHTt2VPny5RUQEKDGjRtr+fLlRXKs/yR2u12hoaGqVKmSBg4cqNjYWH366afKzs7W8OHDdcMNN8jf319NmjTR119/7bJtcnKyKlasqBIlSqhz5846cuSIS/+zzz6r+vXr6+2331ZkZKR8fX0lSXv27FHHjh0VEBCgoKAgdevWLcd316HwZGZmat68eRo4cKDat2+v5ORkZ9/XX38tm82mFStW6MYbb1SJEiXUrFkz7dixwzmGv828IchcZ5544gktWLBA7777rjZt2qSoqCjFxcXp6NGjkv4MKRUqVND8+fO1bds2jRkzRk899ZQ+/PBD5xxTp07V5MmT9fLLL2vz5s2Ki4vT3XffrZ07d7rrsP5x+vbtq6SkJOf7d955J8fXcmRlZWno0KHasGGDVqxYoWLFiqlz585yOBwu40aOHKl//etf2r59u+Li4nLsKzMzU+3atdOKFSv0/fffq02bNrrrrru0Z8+ewjk4SJL8/Px09uxZDR48WGvWrNHcuXO1efNmde3aVW3atHH+va1du1b9+vXT4MGDlZaWpltvvVXPP/98jvl27dqlBQsWKCUlRWlpaXI4HOrYsaOOHj2qlStXatmyZfrll1/UvXv3oj7Uf6wPP/xQNWrUUPXq1XX//ffrnXfe0d8/uu3pp5/W5MmTtWHDBnl7e6tv377OPv4288iC8Xr37m117NjRyszMtIoXL27Nnj3b2Xf27FkrPDzcmjRp0iW3HzRokBUfH+98Hx4ebr3wwgsuYxo3bmw98sgjBV88XFw8l4cOHbLsdru1e/dua/fu3Zavr691+PBhq2PHjlbv3r1z3fbw4cOWJGvLli2WZVlWRkaGJcmaMmWKy7ikpCQrODj4snXUqlXLeu211wrikGD9/3m1LMtyOBzWsmXLLLvdbiUkJFheXl7W77//7jL+9ttvt0aNGmVZlmX16NHDateunUt/9+7dXc7h2LFjreLFi1uHDh1yti1dutTy8vKy9uzZ42zbunWrJclat25dAR8hctOsWTPn39+5c+esMmXKWF999ZVlWZb11VdfWZKs5cuXO8cvXrzYkmT997//veSc/G3mxIrMdSQ9PV3nzp1T8+bNnW3FixfXTTfdpO3btzvbpk+frkaNGqls2bIKCAjQzJkznQn/5MmT2rdvn8scktS8eXOXOVC4ypYt61yKTkpKUvv27VWmTBmXMTt37lSPHj1UpUoVBQUFqXLlypKU419rN95442X3lZmZqeHDh6tmzZoKCQlRQECAtm/fzr/6CtiiRYsUEBAgX19ftW3bVt27d1eXLl104cIFVatWTQEBAc7XypUrnZcJt2/friZNmrjM1bRp0xzzV6pUSWXLlnW+3759uyIiIhQREeFsi4mJUUhICH/LRWDHjh1at26devToIUny9vZW9+7dNWvWLJdxdevWdf4cFhYmSTp06JAk/jbzipt9/2Hmzp2r4cOHa/LkyWratKkCAwP10ksvae3ate4uDX/Tt29f53eMTZ8+PUf/XXfdpUqVKumtt95SeHi4HA6HateurbNnz7qM8/f3v+x+hg8frmXLlunll19WVFSU/Pz81KVLlxzz4NrceuutmjFjhnx8fBQeHi5vb2/NmzdPXl5e2rhxo7y8vFzGBwQE5Gv+K51nFK1Zs2bp/PnzLjf3WpYlu92u119/3dlWvHhx5882m02SnJeH+dvMG4LMdaRq1ary8fHR6tWrValSJUl/PqWyfv16PfbYY5Kk1atXq1mzZnrkkUec2/31BtGgoCCFh4dr9erVat26tbN99erVuummm4rmQCDpz6dczp49K5vNluPeliNHjmjHjh1666231LJlS0nSqlWrrmo/q1evVkJCgjp37izpz38F7t69+5pqR07+/v6KiopyaWvQoIEuXLigQ4cOOc/j39WsWTPHPzRSU1OvuL+aNWtq79692rt3r3NVZtu2bTp+/LhiYmKu8iiQF+fPn9d7772nyZMn684773Tp69Spkz744APVqFHjivPwt5k3BJnriL+/vwYOHKgRI0aoVKlSqlixoiZNmqTTp0+rX79+kqTo6Gi99957+uKLLxQZGan3339f69evV2RkpHOeESNGaOzYsapatarq16+vpKQkpaWlafbs2e46tH8kLy8v5yWAv/9rvWTJkipdurRmzpypsLAw7dmzRyNHjryq/URHRyslJUV33XWXbDabnnnmmRw3DKNwVKtWTT179lSvXr00efJkNWjQQIcPH9aKFStUt25dtW/fXkOGDFHz5s318ssvq2PHjvri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\n"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "O clássico FizzBuzz: para cada número de 1 a 100, se for múltiplo de 3 e de 5 ao mesmo tempo escrevo \\\"FizzBuzz\\\", se for só múltiplo de 3 escrevo \\\"Fizz\\\", se for só múltiplo de 5 escrevo \\\"Buzz\\\", e nos outros casos escrevo o próprio número. A ordem dos `if` importa: preciso checar o \\\"múltiplo dos dois\\\" primeiro."
+      ],
+      "metadata": {
+        "id": "Lw9j6Ee3mXGS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for numero in range(1, 101):\n",
+        "\n",
+        "    if numero % 3 == 0 and numero % 5 == 0:\n",
+        "        print(\"FizzBuzz\")\n",
+        "    elif numero % 3 == 0:\n",
+        "        print(\"Fizz\")\n",
+        "    elif numero % 5 == 0:\n",
+        "        print(\"Buzz\")\n",
+        "    else:\n",
+        "        print(numero)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hkSiivegmTCs",
+        "outputId": "ba36443a-3775-4347-c1e8-e6871e5e28bd"
+      },
+      "execution_count": 44,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "Fizz\n",
+            "4\n",
+            "Buzz\n",
+            "Fizz\n",
+            "7\n",
+            "8\n",
+            "Fizz\n",
+            "Buzz\n",
+            "11\n",
+            "Fizz\n",
+            "13\n",
+            "14\n",
+            "FizzBuzz\n",
+            "16\n",
+            "17\n",
+            "Fizz\n",
+            "19\n",
+            "Buzz\n",
+            "Fizz\n",
+            "22\n",
+            "23\n",
+            "Fizz\n",
+            "Buzz\n",
+            "26\n",
+            "Fizz\n",
+            "28\n",
+            "29\n",
+            "FizzBuzz\n",
+            "31\n",
+            "32\n",
+            "Fizz\n",
+            "34\n",
+            "Buzz\n",
+            "Fizz\n",
+            "37\n",
+            "38\n",
+            "Fizz\n",
+            "Buzz\n",
+            "41\n",
+            "Fizz\n",
+            "43\n",
+            "44\n",
+            "FizzBuzz\n",
+            "46\n",
+            "47\n",
+            "Fizz\n",
+            "49\n",
+            "Buzz\n",
+            "Fizz\n",
+            "52\n",
+            "53\n",
+            "Fizz\n",
+            "Buzz\n",
+            "56\n",
+            "Fizz\n",
+            "58\n",
+            "59\n",
+            "FizzBuzz\n",
+            "61\n",
+            "62\n",
+            "Fizz\n",
+            "64\n",
+            "Buzz\n",
+            "Fizz\n",
+            "67\n",
+            "68\n",
+            "Fizz\n",
+            "Buzz\n",
+            "71\n",
+            "Fizz\n",
+            "73\n",
+            "74\n",
+            "FizzBuzz\n",
+            "76\n",
+            "77\n",
+            "Fizz\n",
+            "79\n",
+            "Buzz\n",
+            "Fizz\n",
+            "82\n",
+            "83\n",
+            "Fizz\n",
+            "Buzz\n",
+            "86\n",
+            "Fizz\n",
+            "88\n",
+            "89\n",
+            "FizzBuzz\n",
+            "91\n",
+            "92\n",
+            "Fizz\n",
+            "94\n",
+            "Buzz\n",
+            "Fizz\n",
+            "97\n",
+            "98\n",
+            "Fizz\n",
+            "Buzz\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Fiz uma versão simples do jogo da forca. O jogador tem um número limitado de tentativas para descobrir a palavra secreta, letra por letra. Vou mostrando a palavra com traços `_` no lugar das letras que ainda não foram descobertas."
+      ],
+      "metadata": {
+        "id": "G0a30r_0mtuZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palavra = \"python\"\n",
+        "tentativas = 6\n",
+        "letras = []\n",
+        "\n",
+        "while tentativas > 0:\n",
+        "    palavra_mostrada = \"\"\n",
+        "\n",
+        "    for letra in palavra:\n",
+        "        if letra in letras:\n",
+        "            palavra_mostrada = palavra_mostrada + letra\n",
+        "        else:\n",
+        "            palavra_mostrada = palavra_mostrada + \"_\"\n",
+        "\n",
+        "    print(\"Palavra:\", palavra_mostrada)\n",
+        "\n",
+        "    if palavra_mostrada == palavra:\n",
+        "        print(\"Você ganhou!\")\n",
+        "        break\n",
+        "\n",
+        "    letra = input(\"Digite uma letra: \")\n",
+        "\n",
+        "    if letra in palavra:\n",
+        "        letras.append(letra)\n",
+        "        print(\"Acertou!\")\n",
+        "    else:\n",
+        "        tentativas = tentativas - 1\n",
+        "        print(\"Errou! Tentativas restantes:\", tentativas)\n",
+        "\n",
+        "if tentativas == 0:\n",
+        "    print(\"Você perdeu!\")\n",
+        "    print(\"A palavra era:\", palavra)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9T9T98XWmfTq",
+        "outputId": "5ccba1c3-a180-416d-e80a-78df2f6d3921"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Palavra: ______\n",
+            "Digite uma letra: k\n",
+            "Errou! Tentativas restantes: 5\n",
+            "Palavra: ______\n",
+            "Digite uma letra: a\n",
+            "Errou! Tentativas restantes: 4\n",
+            "Palavra: ______\n",
+            "Digite uma letra: t\n",
+            "Acertou!\n",
+            "Palavra: __t___\n",
+            "Digite uma letra: e\n",
+            "Errou! Tentativas restantes: 3\n",
+            "Palavra: __t___\n",
+            "Digite uma letra: p\n",
+            "Acertou!\n",
+            "Palavra: p_t___\n",
+            "Digite uma letra: y\n",
+            "Acertou!\n",
+            "Palavra: pyt___\n",
+            "Digite uma letra: h\n",
+            "Acertou!\n",
+            "Palavra: pyth__\n",
+            "Digite uma letra: o\n",
+            "Acertou!\n",
+            "Palavra: pytho_\n",
+            "Digite uma letra: n\n",
+            "Acertou!\n",
+            "Palavra: python\n",
+            "Você ganhou!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "O Bubble Sort compara pares de elementos vizinhos e troca eles de lugar quando estão na ordem errada. Repetindo isso várias vezes, os maiores valores vão \\\"borbulhando\\\" para o final da lista. Não é o algoritmo mais rápido, mas é o mais fácil de entender."
+      ],
+      "metadata": {
+        "id": "cXP-yhrxmzdi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [5, 3, 8, 1, 2]\n",
+        "\n",
+        "for i in range(len(numeros)):\n",
+        "    for j in range(len(numeros) - 1):\n",
+        "        if numeros[j] > numeros[j + 1]:\n",
+        "            numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]\n",
+        "\n",
+        "print(\"Lista ordenada:\", numeros)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YsLBPg3wmwgL",
+        "outputId": "35f66cef-ece8-4c47-aebf-74dfdb4cc6f6"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lista ordenada: [1, 2, 3, 5, 8]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Represento o tabuleiro como uma lista de 9 posições. A cada rodada, mostro o tabuleiro, peço a posição para o jogador da vez e marco com \\\"X\\\" ou \\\"O\\\". Depois de cada jogada, checo se alguma das combinações de vitória (linhas, colunas ou diagonais) foi completada."
+      ],
+      "metadata": {
+        "id": "PYIvhkAZnTH5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tabuleiro = [\" \", \" \", \" \",\n",
+        "             \" \", \" \", \" \",\n",
+        "             \" \", \" \", \" \"]\n",
+        "\n",
+        "jogador = \"X\"\n",
+        "\n",
+        "for rodada in range(9):\n",
+        "    print(tabuleiro[0], \"|\", tabuleiro[1], \"|\", tabuleiro[2])\n",
+        "    print(\"--+---+--\")\n",
+        "    print(tabuleiro[3], \"|\", tabuleiro[4], \"|\", tabuleiro[5])\n",
+        "    print(\"--+---+--\")\n",
+        "    print(tabuleiro[6], \"|\", tabuleiro[7], \"|\", tabuleiro[8])\n",
+        "\n",
+        "    posicao = int(input(\"Jogador \" + jogador + \", escolha uma posição de 1 a 9: \"))\n",
+        "\n",
+        "    if tabuleiro[posicao - 1] == \" \":\n",
+        "        tabuleiro[posicao - 1] = jogador\n",
+        "    else:\n",
+        "        print(\"Essa posição já está ocupada!\")\n",
+        "        continue\n",
+        "\n",
+        "    if ((tabuleiro[0] == jogador and tabuleiro[1] == jogador and tabuleiro[2] == jogador) or\n",
+        "        (tabuleiro[3] == jogador and tabuleiro[4] == jogador and tabuleiro[5] == jogador) or\n",
+        "        (tabuleiro[6] == jogador and tabuleiro[7] == jogador and tabuleiro[8] == jogador) or\n",
+        "        (tabuleiro[0] == jogador and tabuleiro[3] == jogador and tabuleiro[6] == jogador) or\n",
+        "        (tabuleiro[1] == jogador and tabuleiro[4] == jogador and tabuleiro[7] == jogador) or\n",
+        "        (tabuleiro[2] == jogador and tabuleiro[5] == jogador and tabuleiro[8] == jogador) or\n",
+        "        (tabuleiro[0] == jogador and tabuleiro[4] == jogador and tabuleiro[8] == jogador) or\n",
+        "        (tabuleiro[2] == jogador and tabuleiro[4] == jogador and tabuleiro[6] == jogador)):\n",
+        "\n",
+        "        print(\"Jogador\", jogador, \"venceu!\")\n",
+        "        break\n",
+        "\n",
+        "    if jogador == \"X\":\n",
+        "        jogador = \"O\"\n",
+        "    else:\n",
+        "        jogador = \"X\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FZN-q7J3m4jb",
+        "outputId": "9f3c0102-7864-46af-f501-de7e076d1de4"
+      },
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "  |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "Jogador X, escolha uma posição de 1 a 9: 1\n",
+            "X |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "Jogador O, escolha uma posição de 1 a 9: 2\n",
+            "X | O |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "Jogador X, escolha uma posição de 1 a 9: 3\n",
+            "X | O | X\n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "Jogador O, escolha uma posição de 1 a 9: 4\n",
+            "X | O | X\n",
+            "--+---+--\n",
+            "O |   |  \n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "Jogador X, escolha uma posição de 1 a 9: 6\n",
+            "X | O | X\n",
+            "--+---+--\n",
+            "O |   | X\n",
+            "--+---+--\n",
+            "  |   |  \n",
+            "Jogador O, escolha uma posição de 1 a 9: 7\n",
+            "X | O | X\n",
+            "--+---+--\n",
+            "O |   | X\n",
+            "--+---+--\n",
+            "O |   |  \n",
+            "Jogador X, escolha uma posição de 1 a 9: 9\n",
+            "Jogador X venceu!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Esse exercício é parecido com o 27, mas dessa vez resolvi usar a classe `Counter` do módulo `collections`, que conta automaticamente quantas vezes cada letra aparece. Se os dois \\\"contadores\\\" forem iguais, as palavras são anagramas."
+      ],
+      "metadata": {
+        "id": "2u1M_Hu1n36p"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palavra1 = input(\"Digite a primeira palavra: \")\n",
+        "palavra2 = input(\"Digite a segunda palavra: \")\n",
+        "\n",
+        "palavra1 = palavra1.lower()\n",
+        "palavra2 = palavra2.lower()\n",
+        "\n",
+        "if sorted(palavra1) == sorted(palavra2):\n",
+        "    print(\"São anagramas\")\n",
+        "else:\n",
+        "    print(\"Não são anagramas\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OkgiYK5cneb7",
+        "outputId": "233c8681-6462-42bc-acf3-8276779e4c35"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a primeira palavra: amor\n",
+            "Digite a segunda palavra: roma\n",
+            "São anagramas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Percorro a string letra por letra e vou somando 1 num contador toda vez que a letra (em minúsculo) está entre as vogais \"aeiou\"."
+      ],
+      "metadata": {
+        "id": "Qekk-0bJoGhR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = input(\"Digite um texto: \")\n",
+        "\n",
+        "vogais = \"aeiou\"\n",
+        "contador = 0\n",
+        "\n",
+        "for letra in texto.lower():\n",
+        "    if letra in vogais:\n",
+        "        contador = contador + 1\n",
+        "\n",
+        "print(\"Quantidade de vogais:\", contador)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V9BiQeuon9vU",
+        "outputId": "f8ecf3cc-dba9-4c08-9b46-f8242eaaca0a"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um texto: mais tarde irei a padaria para comprar pão\n",
+            "Quantidade de vogais: 17\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Parecido com o exercício 10, mas agora em vez de imprimir sempre 10 termos, o usuário escolhe até que número (valor) a sequência deve ir. Vou gerando os termos e parando assim que ultrapassar o limite."
+      ],
+      "metadata": {
+        "id": "11SRNNrwolhq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "a = 0\n",
+        "b = 1\n",
+        "\n",
+        "while a <= n:\n",
+        "    print(a)\n",
+        "\n",
+        "    proximo = a + b\n",
+        "    a = b\n",
+        "    b = proximo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f9RmHkZsoODV",
+        "outputId": "4283ebca-1f9a-4330-bddf-a4e8cd50bdc1"
+      },
+      "execution_count": 58,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 52\n",
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "8\n",
+            "13\n",
+            "21\n",
+            "34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Defino um conjunto de caracteres possíveis (letras e números) e uso `random.choice()` dentro de um laço para sortear um caractere de cada vez até formar a senha do tamanho desejado."
+      ],
+      "metadata": {
+        "id": "wZcAhbc3o_F5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "import string\n",
+        "\n",
+        "caracteres = string.ascii_letters + string.digits\n",
+        "\n",
+        "senha = \"\"\n",
+        "\n",
+        "for i in range(8):\n",
+        "    senha = senha + random.choice(caracteres)\n",
+        "\n",
+        "print(\"Senha gerada:\", senha)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qdEhrIeEopDD",
+        "outputId": "e832e72e-c4ba-4a25-9a21-f28da27d78e0"
+      },
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Senha gerada: q5Xrm2pv\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Recursão é quando uma função chama ela mesma. Para o fatorial, a \"regra\" é: fatorial(n) = n * fatorial(n - 1), e o caso base é fatorial(0) = 1 (se não a função nunca ia parar de se chamar)."
+      ],
+      "metadata": {
+        "id": "qSzfIfuqp1_6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def fatorial(numero):\n",
+        "    if numero == 0:\n",
+        "        return 1\n",
+        "    else:\n",
+        "        return numero * fatorial(numero - 1)\n",
+        "\n",
+        "\n",
+        "numero = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "resultado = fatorial(numero)\n",
+        "\n",
+        "print(\"O fatorial é:\", resultado)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vV0UYXUlpIeD",
+        "outputId": "9f0202e8-a824-4b69-be31-788d4254eecf"
+      },
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 12\n",
+            "O fatorial é: 479001600\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Uso o `.split()` para quebrar o texto em uma lista de palavras (ele já separa automaticamente pelos espaços em branco) e depois só preciso do `len()` para saber quantas palavras tem."
+      ],
+      "metadata": {
+        "id": "6IAPUIGKqD86"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = input(\"Digite um texto: \")\n",
+        "\n",
+        "palavras = texto.split()\n",
+        "\n",
+        "quantidade = len(palavras)\n",
+        "\n",
+        "print(\"Quantidade de palavras:\", quantidade)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "G6lihmTUp-l7",
+        "outputId": "264cefb4-158a-4a19-bd36-9bdf2dcb83e2"
+      },
+      "execution_count": 63,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um texto: vai corinthians\n",
+            "Quantidade de palavras: 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Simulo o lançamento de dois dados de 6 lados usando `random.randint(1, 6)` duas vezes, e mostro o resultado de cada um mais a soma dos dois."
+      ],
+      "metadata": {
+        "id": "6gTA_O1-qOO5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "dado1 = random.randint(1, 6)\n",
+        "dado2 = random.randint(1, 6)\n",
+        "\n",
+        "print(\"Resultado do primeiro dado:\", dado1)\n",
+        "print(\"Resultado do segundo dado:\", dado2)\n",
+        "\n",
+        "print(\"Soma dos dados:\", dado1 + dado2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aeZ8UP4PqK0C",
+        "outputId": "e834d16a-7866-40f8-c92e-26e7fa2fdf15"
+      },
+      "execution_count": 64,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Resultado do primeiro dado: 1\n",
+            "Resultado do segundo dado: 3\n",
+            "Soma dos dados: 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Fiz um pequeno menu em looping (`while True`) que permite adicionar item, remover item, listar tudo o que já foi adicionado ou sair do programa. A lista de compras fica guardada numa lista comum do Python."
+      ],
+      "metadata": {
+        "id": "Rawzq-_eqrDg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "compras = []\n",
+        "\n",
+        "while True:\n",
+        "    print(\"\\n1 - Adicionar item\")\n",
+        "    print(\"2 - Remover item\")\n",
+        "    print(\"3 - Listar compras\")\n",
+        "    print(\"4 - Sair\")\n",
+        "\n",
+        "    opcao = input(\"Escolha uma opção: \")\n",
+        "\n",
+        "    if opcao == \"1\":\n",
+        "        item = input(\"Digite o item: \")\n",
+        "        compras.append(item)\n",
+        "        print(\"Item adicionado!\")\n",
+        "\n",
+        "    elif opcao == \"2\":\n",
+        "        item = input(\"Digite o item que deseja remover: \")\n",
+        "\n",
+        "        if item in compras:\n",
+        "            compras.remove(item)\n",
+        "            print(\"Item removido!\")\n",
+        "        else:\n",
+        "            print(\"Item não encontrado!\")\n",
+        "\n",
+        "    elif opcao == \"3\":\n",
+        "        print(\"Lista de compras:\")\n",
+        "\n",
+        "        for item in compras:\n",
+        "            print(\"-\", item)\n",
+        "\n",
+        "    elif opcao == \"4\":\n",
+        "        print(\"Programa encerrado.\")\n",
+        "        break\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Opção inválida!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R4IDAsmCqaEk",
+        "outputId": "55975650-6e39-4981-b0c1-9ea8280c22c8"
+      },
+      "execution_count": 65,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "1 - Adicionar item\n",
+            "2 - Remover item\n",
+            "3 - Listar compras\n",
+            "4 - Sair\n",
+            "Escolha uma opção: 1\n",
+            "Digite o item: feijão\n",
+            "Item adicionado!\n",
+            "\n",
+            "1 - Adicionar item\n",
+            "2 - Remover item\n",
+            "3 - Listar compras\n",
+            "4 - Sair\n",
+            "Escolha uma opção: 1\n",
+            "Digite o item: suco de laranja\n",
+            "Item adicionado!\n",
+            "\n",
+            "1 - Adicionar item\n",
+            "2 - Remover item\n",
+            "3 - Listar compras\n",
+            "4 - Sair\n",
+            "Escolha uma opção: 3\n",
+            "Lista de compras:\n",
+            "- feijão\n",
+            "- suco de laranja\n",
+            "\n",
+            "1 - Adicionar item\n",
+            "2 - Remover item\n",
+            "3 - Listar compras\n",
+            "4 - Sair\n",
+            "Escolha uma opção: 2\n",
+            "Digite o item que deseja remover: feijão\n",
+            "Item removido!\n",
+            "\n",
+            "1 - Adicionar item\n",
+            "2 - Remover item\n",
+            "3 - Listar compras\n",
+            "4 - Sair\n",
+            "Escolha uma opção: 4\n",
+            "Programa encerrado.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A forma mais direta de remover duplicatas em Python é transformar a lista em um `set` (conjunto), já que conjuntos não aceitam valores repetidos. Depois transformo de volta em lista."
+      ],
+      "metadata": {
+        "id": "dMaxXwciqxUp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [1, 2, 2, 3, 4, 4, 5, 5, 6]\n",
+        "\n",
+        "sem_duplicatas = []\n",
+        "\n",
+        "for numero in numeros:\n",
+        "    if numero not in sem_duplicatas:\n",
+        "        sem_duplicatas.append(numero)\n",
+        "\n",
+        "print(\"Lista sem duplicatas:\", sem_duplicatas)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AkPOAw0VquOz",
+        "outputId": "d8afe26b-e291-488e-8045-a32c01b8bdef"
+      },
+      "execution_count": 66,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lista sem duplicatas: [1, 2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Reaproveito a mesma lógica do exercício 18 (verificar se um número é primo), só que agora dentro de um laço que testa todos os números de 2 até n, guardando os que forem primos numa lista."
+      ],
+      "metadata": {
+        "id": "3f1xVomzrBdp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"Digite um número: \"))\n",
+        "\n",
+        "for numero in range(2, n + 1):\n",
+        "    primo = True\n",
+        "\n",
+        "    for i in range(2, numero):\n",
+        "        if numero % i == 0:\n",
+        "            primo = False\n",
+        "\n",
+        "    if primo:\n",
+        "        print(numero)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-yUARACOq1f7",
+        "outputId": "25f18fe1-5e0c-4e37-b36b-b5cf0f3634c7"
+      },
+      "execution_count": 69,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número: 10\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Fiz um conversor simples de metros para centímetros. Como 1 metro tem 100 centímetros, basta multiplicar o valor digitado por 100."
+      ],
+      "metadata": {
+        "id": "mITyZ-mfrnhh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "metros = float(input(\"Digite o valor em metros: \"))\n",
+        "\n",
+        "centimetros = metros * 100\n",
+        "\n",
+        "print(\"Valor em centímetros:\", centimetros)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZW2OmMWVrMJL",
+        "outputId": "5324ec09-6186-4591-adde-da477ac0bc90"
+      },
+      "execution_count": 70,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o valor em metros: 250\n",
+            "Valor em centímetros: 25000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Diferente do exercício 35 (que ia até um valor limite), aqui o usuário escolhe quantos termos da sequência ele quer ver, não até qual número. Por isso uso um `for` contando a quantidade de termos, ao invés do `while` com limite de valor."
+      ],
+      "metadata": {
+        "id": "d5ILWDQ-sC5D"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "quantidade = int(input(\"Quantos termos deseja? \"))\n",
+        "\n",
+        "a = 0\n",
+        "b = 1\n",
+        "\n",
+        "for i in range(quantidade):\n",
+        "    print(a)\n",
+        "\n",
+        "    proximo = a + b\n",
+        "    a = b\n",
+        "    b = proximo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AMAvWJnYr4cC",
+        "outputId": "89252e87-ed2f-4293-84a9-5f8ed76bdffd"
+      },
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Quantos termos deseja? 5\n",
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Percorro a lista de números e, para cada um, verifico se é par ou ímpar com o operador `%`, guardando o resultado num dicionário onde a chave é o número e o valor é a classificação."
+      ],
+      "metadata": {
+        "id": "7mob5MG9sJRp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "\n",
+        "pares = []\n",
+        "impares = []\n",
+        "\n",
+        "for numero in numeros:\n",
+        "    if numero % 2 == 0:\n",
+        "        pares.append(numero)\n",
+        "    else:\n",
+        "        impares.append(numero)\n",
+        "\n",
+        "print(\"Números pares:\", pares)\n",
+        "print(\"Números ímpares:\", impares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-KxMDS-gsGIq",
+        "outputId": "58200919-8ff9-499b-f063-2ef0102d1553"
+      },
+      "execution_count": 76,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Números pares: [2, 4, 6, 8, 10]\n",
+            "Números ímpares: [1, 3, 5, 7, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "A média eu já sei calcular (soma dividida pela quantidade). O desvio padrão mostra o quanto os valores variam em torno da média: calculo a diferença de cada valor para a média, elevo ao quadrado, tiro a média dessas diferenças (a variância) e no final aplico raiz quadrada."
+      ],
+      "metadata": {
+        "id": "G9yQdftEsR5x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import statistics\n",
+        "\n",
+        "numeros = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "media = statistics.mean(numeros)\n",
+        "desvio = statistics.stdev(numeros)\n",
+        "\n",
+        "print(\"Média:\", media)\n",
+        "print(\"Desvio padrão:\", desvio)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ODUS1uLmsN5b",
+        "outputId": "c51d80bb-fade-4a2e-efcf-811ae580db79"
+      },
+      "execution_count": 79,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Média: 30\n",
+            "Desvio padrão: 15.811388300841896\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "É o mesmo princípio do exercício 12 (contagem de caracteres), só que aplicado a uma lista de números em vez de uma string. Vou contando as ocorrências de cada número num dicionário."
+      ],
+      "metadata": {
+        "id": "7qX0A3J8saby"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [1, 2, 2, 3, 3, 3, 4, 4]\n",
+        "\n",
+        "contagem = {}\n",
+        "\n",
+        "for numero in numeros:\n",
+        "    if numero in contagem:\n",
+        "        contagem[numero] = contagem[numero] + 1\n",
+        "    else:\n",
+        "        contagem[numero] = 1\n",
+        "\n",
+        "print(contagem)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Cunk7gcIsWVj",
+        "outputId": "44f326db-c84f-41bd-e36f-0a7ec03191bb"
+      },
+      "execution_count": 81,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1: 1, 2: 2, 3: 3, 4: 2}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "No Insertion Sort, eu pego cada elemento da lista (a partir do segundo) e vou \"inserindo\" ele na posição correta entre os elementos já ordenados antes dele, empurrando os maiores para a direita até achar o lugar certo."
+      ],
+      "metadata": {
+        "id": "-0oki0iCsjBo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [5, 2, 4, 1, 3]\n",
+        "\n",
+        "for i in range(1, len(numeros)):\n",
+        "    numero = numeros[i]\n",
+        "    j = i - 1\n",
+        "\n",
+        "    while j >= 0 and numeros[j] > numero:\n",
+        "        numeros[j + 1] = numeros[j]\n",
+        "        j = j - 1\n",
+        "\n",
+        "    numeros[j + 1] = numero\n",
+        "\n",
+        "print(\"Lista ordenada:\", numeros)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i04q5S-Nsdpz",
+        "outputId": "c11f50f3-7e87-4624-cb45-4846804a9da9"
+      },
+      "execution_count": 82,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Lista ordenada: [1, 2, 3, 4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Para pegar cada dígito de um número separadamente, transformo o número em string com `str()` (assim posso percorrer dígito por dígito) e depois converto cada caractere de volta para `int` na hora de somar."
+      ],
+      "metadata": {
+        "id": "8Pq8pm_Atedo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = input(\"Digite um número inteiro: \")\n",
+        "\n",
+        "soma = 0\n",
+        "\n",
+        "for digito in numero:\n",
+        "    soma = soma + int(digito)\n",
+        "\n",
+        "print(\"Soma dos dígitos:\", soma)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "66NH1LyVtPbq",
+        "outputId": "2b907d77-322a-45ba-fa1f-a7ebe32f1d15"
+      },
+      "execution_count": 85,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um número inteiro: 45\n",
+            "Soma dos dígitos: 9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Último exercício da lista, e é bem parecido com o 12: conto quantas vezes cada letra aparece na string, mas dessa vez ignoro espaços e pontuação, considerando só caracteres alfabéticos (usando `.isalpha()`), e tudo em minúsculo para não contar \"A\" e \"a\" separadamente."
+      ],
+      "metadata": {
+        "id": "0QhsnXm-uBDB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "texto = input(\"Digite um texto: \")\n",
+        "\n",
+        "contagem = {}\n",
+        "\n",
+        "for letra in texto.lower():\n",
+        "    if letra.isalpha():\n",
+        "        if letra in contagem:\n",
+        "            contagem[letra] = contagem[letra] + 1\n",
+        "        else:\n",
+        "            contagem[letra] = 1\n",
+        "\n",
+        "print(\"Frequência das letras:\")\n",
+        "\n",
+        "for letra in contagem:\n",
+        "    print(letra, \":\", contagem[letra])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dXwhTlREt1D8",
+        "outputId": "97d5e999-99fe-42aa-fd69-6f81cdb69904"
+      },
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um texto: amo minha namorada\n",
+            "Frequência das letras:\n",
+            "a : 5\n",
+            "m : 3\n",
+            "o : 2\n",
+            "i : 1\n",
+            "n : 2\n",
+            "h : 1\n",
+            "r : 1\n",
+            "d : 1\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
